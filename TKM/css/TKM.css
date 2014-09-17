@@ -1,0 +1,252 @@
+
+/* 	Estilo de la Pagina		*/
+
+	body{
+		background-color : #FFFFF0;
+		margin-left : 10%;
+		margin-right : 10%;
+		padding :10px;
+	}
+
+	#portada{
+		margin:auto;
+		width: 100%;
+		height: 150px;		
+	}	
+
+	img{
+		width: 80%;
+		height: 50%;
+		float :center;	
+	}
+
+	#links_proveedores {
+		width: 200px;	
+		height: 200px;	
+		border: 5px;	
+		margin :20px;
+		float: center;
+	}
+
+	#fotolocal{
+		margin : auto;
+		height : 50px;
+		width  : 100%; 
+		height : 500px;
+		float : center;
+	}
+
+	.titulo{
+		font-family: sans-serif;
+		margin-top : 5%;
+		margin-bottom : 5%;
+		font-size : 2.2em;
+		color : rgb(22,49,114);
+		text-align : center;
+		clear : both;
+	}
+	.texto {
+		font-family: sans-serif;
+		margin: 5%;
+		font-size : 1.5em;
+		color :	rgb(22,49,114);
+		text-align : justify;
+	}
+	
+	/*	BOTONERA PRINCIPAL	*/
+
+	nav{
+		
+		width:100%;
+		height:100px;
+		margin-bottom : 10px;
+	}
+	
+	.contenedor{
+		width : 25%;
+		height : 130px;
+		float : left;
+		-webkit-transition: height .4s;
+		margin-bottom : 50px;
+	}
+	
+	.icon{
+		display: block;
+		margin:5px auto;
+		background-color: rgba(255,255,255,.15);
+		width:40%;
+		padding:5px;
+		-webkit-border-radius: 50%;						/* hace el efecto redondo del icono, que en realidad es cuadrado */
+		-webkit-box-shadow: 0px 0px 0px 30px rgba(255,255,255,0); /* Da el fondo color del fondo al hacer hoover */
+		-webkit-transition:box-shadow .4s;
+	}
+	
+
+	.texto_botonera {
+		font-family: sans-serif;
+		margin: 5px auto;
+		font-size: 1.7em;
+		color:white;
+		text-align: center;
+		
+		opacity: .5;
+}
+	a{
+		text-decoration: none;
+	}
+
+	#bp_home {
+		background-color :	rgb(22,163,198);
+	
+	}
+	
+	#bp_catalogo {
+			background-color :	rgb(22,125,170);
+	
+	}
+
+	#bp_proveedores {
+		background-color :	rgb(22,87,142);
+	
+	}
+	
+	#bp_contacto {
+		background-color :	rgb(22,49,114);
+	
+	}
+	
+	/*   	EFECTOS	DE LA BOTONERA	*/
+.contenedor:hover{
+	height:150px;
+}
+
+.contenedor:hover.texto{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	opacity: 1;
+}
+
+.contenedor:hover .icon{
+	-webkit-box-shadow:0px 0px 0px 0px rgba(255,255,255,.6);
+}
+	/*		SECCION CONTACTO	*/
+
+section.contacto{
+	width: 600px;
+	height: 450px;
+	margin: auto;
+}
+
+form{
+	margin-left:5px;
+	margin-bottom:10px;
+	border:1px;
+	border-bottom-style:none;
+}
+
+label {	
+	float: left;
+	margin: 5px;
+	margin-left :10px;
+	width: 35px;
+	text-align: right; 
+	font-size : 1.27em;
+	font-family: sans-serif;
+	color :	rgb(22,49,114);
+   }
+
+
+input, textarea {
+	width: 400px; 
+	margin: 0px 20px 25px 60px;
+	padding: 5px;
+	background-color :	rgb(22,87,142);
+	border-radius: 5px; 
+	font-family: sans-serif; 
+	font-size: 16px;
+	color: white;
+   }
+
+input {
+	height: 25px;
+   }
+   
+textarea {
+	height: 110px; 
+   }
+   
+input[type=submit]{
+	width: 100px; 
+	height: 40px; 
+	float: right; 
+	padding: 10px; 
+	margin: 0 60px 0 0;
+	border: 1px solid black;
+	cursor: pointer;
+	background-color :	rgb(22,49,114);
+	color: white;
+   }
+
+ /* CATALOGO */
+
+ 	#busqueda {
+
+ 		float:center;
+ 	}
+
+ 	select{
+		margin-left : 50px;
+ 	}
+
+
+ 	.imagen_catalogo{
+
+ 		height : 100px;
+ 		width: 100%;
+
+ 	}
+   	.item_catalogo{
+   		font-family: sans-serif;
+   		color : white;
+		float : left;
+		width : 200px;
+		height : 300px;
+		padding : 10px;
+		margin-bottom:20px; ;
+		margin-top : 20px;
+		margin-left : 20px;
+		background-color :	rgb(22,163,198);
+		border : 5px solid;
+		border-color: rgb(22,49,114);
+		border-radius: 10%;
+	}
+.item_catalogo:hover{
+
+	background-color : rgb(22,180,210);
+	border : 10px solid;
+	border-color: rgb(22,49,114);
+}
+
+/*	FOOTER	*/
+	
+	footer{
+		clear :both;
+		float:center;
+		margin-top :100px;
+		height	: 100px;
+
+	}
+
+	.texto_footer{
+		margin-top:10%;
+		margin-bottom :2%; 
+		font-size : 0.7em;
+		color : rgb(22,125,170);
+		text-align : center;
+		float:center;
+	}
+	#facebook{
+		width 	: 15px;
+		height	: 15px;
+		float	:	center;
+	}
