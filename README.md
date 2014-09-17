@@ -18,21 +18,13 @@ Comercio electrónico de moda
 2da Entrega
 
     Administrador
-        Usuarios
-        Prendas
-        Marcas
-        Compras
+       	 Usuarios
+        	 Prendas
+        	 Marcas
+        	 Compras
     Registrarse
     Login
     Carrito de Compras
     
     El usuario logueado hace click en agregar al carrito y se agrega usando ajax
-    El usuario hace click en “Finalizar Compra” y se manda un mail al admin y se graba la compra en la BD. 
-    
-    
-    
-    
-    
-    
-  
-
+    El usuario hace click en “Finalizar Compra” y se manda un mail al admin y se graba la compra en la BD.
