@@ -1,0 +1,42 @@
+.collapse, .navbar-collapse, .navbar-ex1-collapse,.nav, .navbar-nav, ul ,li{
+	background-color: #1E90FF;
+	
+}
+
+a:focus,a:hover , .open:focus,.open:hover {
+color: #000;
+background-color: #7B68EE transparent;
+}
+.txtnav{
+	color : white;
+}
+
+.glyphicon{
+	color:white;
+}
+
+.dropdown:hover , .dropdown-toggle:hover, ul:hover ,li:hover {
+ background-color:#7B68EE;
+}
+
+h1,p,.textform {
+	margin-left : 5%;
+	margin-right : 5%;
+	color:#7B68EE;
+}
+
+p{
+	margin-top : 5%;
+	margin-bottom : 5%;
+	color: #1E90FF;
+}
+
+.btn, .btn-default{
+	background-color:#7B68EE;
+	color : white;	
+}
+
+footer{
+	margin-top : 10%;
+}
+
