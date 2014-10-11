@@ -7,6 +7,21 @@ a:focus,a:hover , .open:focus,.open:hover {
 color: #000;
 background-color: #7B68EE transparent;
 }
+
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus {
+	color: #000;
+	background-color: #7B68EE;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+	color: #000;
+	background-color: #7B68EE;
+}
+
 .txtnav{
 	color : white;
 }
