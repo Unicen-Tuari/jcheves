@@ -13,11 +13,6 @@
       <input type="password" class="form-control" id="pass" 
              placeholder="Introduce tu contraseña">
     </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Recordar mi nombre de usuario y contraseña
-      </label>
-    </div>
     <button type="submit" class="btn btn-default">Log in &nbsp <span class="glyphicon glyphicon-send"></span></button>
   </form>
 {include file="footer.tpl"}

@@ -34,9 +34,26 @@ background-color: #7B68EE transparent;
  background-color:#7B68EE;
 }
 
+.form{
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.textform{
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.form-group{
+	width :30%;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
 h1,p,.textform {
 	margin-left : 5%;
 	margin-right : 5%;
+	margin-bottom :10px;
 	color:#7B68EE;
 }
 
@@ -46,7 +63,19 @@ p{
 	color: #1E90FF;
 }
 
+#cuerpo{
+	margin-left: 40%;
+  	margin-right: 40%;
+}
+
+button{
+	margin-left: auto;
+  	margin-right: auto;
+}
+
 .btn, .btn-default{
+	margin-left: 45%;
+  	margin-right: 45%;
 	background-color:#7B68EE;
 	color : white;	
 }

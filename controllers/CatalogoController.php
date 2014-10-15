@@ -4,7 +4,7 @@
 
 	class CatalogoController {
 		public function actionCatalogo(){
-
+			var_dump("entro");
 			include "./views/CatalogoView.php";
 			$combo_tipo = new tipo;
 			$combo_marca = new marca;

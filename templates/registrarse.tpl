@@ -24,12 +24,6 @@
       <input type="password" class="form-control" id="pass_match" 
              placeholder="Repita la contraseña">
     </div>
-
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Recibir actualizaciones de catalogo al e-mail
-      </label>
-    </div>
     <button type="submit" class="btn btn-default">Registrarse &nbsp <span class="glyphicon glyphicon-send"></span> </button>
   </form>
 {include file="footer.tpl"}

@@ -5,10 +5,10 @@
 
 		<section> 
 			<h1 class = "text-center">	Catalogo		</h1>
-
-			<form action = "catalogo.php" id ="form_buscar" >		
+		<div id= "cuerpo">
+			<form action = "./index.php?action=catalogo" id ="form_buscar" >		
 				<label for="tipo"><span class="textform">Tipo </span> </label>
-					<select form="form_buscar" name="tipo" onchange ="cambiotipo();">
+					<select form="form_buscar" name="tipo" onchange ="cambiotipo();" >
 						<option value="-1" > Todos  </option>
 						<!--	Le llegan los datos asignados desde la view	-->
 						{foreach $tipos as $datostipo}
@@ -31,10 +31,8 @@
 					<input type = "submit" class="btn btn-default" value="Buscar"/>
 
 			</form>
+		</div>
 		<br>
 		</section>
-
-		<div id= "cuerpo">
-
-		</div>
+	
 {include file="footer.tpl"}
