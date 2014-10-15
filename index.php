@@ -10,19 +10,22 @@
 		$controller = new IndexController();
 		$controller->actionIndex();
 	}
+
 	else {
 		
-		if($_REQUEST['action'] == 'proveedores'	) {
 
-			include "./controllers/ProveedoresController.php";
-			$controller = new ProveedoresController();
-			$controller->actionProveedores();
-		}
 		
 		if ($_REQUEST['action'] == 'catalogo'){
 			include "./controllers/CatalogoController.php";
 			$controller = new CatalogoController();
 			$controller->actionCatalogo();
+		}
+
+		if($_REQUEST['action'] == 'proveedores'	) {
+
+			include "./controllers/ProveedoresController.php";
+			$controller = new ProveedoresController();
+			$controller->actionProveedores();
 		}
 
 		if ($_REQUEST['action'] == 'contacto'){

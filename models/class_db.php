@@ -1,7 +1,7 @@
 <?php
 
 	//Configuración
-	class database {
+	abstract class database {
 		private $host 	= "localhost";		// Apache
 		private $db		= "tkm";				// Nombre de la DB
 		private $user 	= "root";			// Nombre del User y la clave
@@ -24,14 +24,14 @@
 			catch(PDOException $pe){
 				die('Error de conexion, Mensaje: ' .$pe->getMessage());
 			}
-			$this->conn = $conn;
+			$this->conexion = $conn;
 			return $conn;
 		}
 
 		public function connection(){
-			if ($this->conn == null)
+			if ($this->conexion == null)
 				$this->connect();
-		return $this->conn;	
+		return $this->conexion;	
 		}
 	
 	
