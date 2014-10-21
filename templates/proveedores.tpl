@@ -14,15 +14,61 @@
 			</article>
 			<br>
 
-			<div>
-				<a class="pull-left" href = "http://www.oshkosh.com/" 		target = '_blank' > <img class= "img-responsive" class="pull-left" id = "links_proveedores" src ="imagenes/Logos/Logo Osh Kosh.gif"	title = "Link a Osh Kosh"	alt = "Logo  Osh Kosh"		>	</a>
+			<div id="contenedor_iconos">
+				<div id="icono">
+					<a  href = "http://www.oshkosh.com/" 
+						target = '_blank' 
+						>
 
-				<a class="pull-left" href = "http://www.gulmez.com.ar/" 		target = '_blank' > <img class= "img-responsive" class="pull-left" id = "links_proveedores" src ="imagenes/Logos/Logo Gulmez.png"		width = "20%"	height = "230"		border = "5"	title = "Link a Gulmez"		alt = "Logo  Gulmez"		>	</a>
-				
-				<a class="pull-left" href = "http://www.route66.com.py/"		target = '_blank' > <img class= "img-responsive" class="pull-left" id = "links_proveedores" src ="imagenes/Logos/Logo Route 66.png"	width = "20%"	height = "230"		border = "5"	title = "Link a Route 66"	alt = "Logo  Route 66"		>	</a>
+						<img class= "img-thumbnail" 
+							 src ="imagenes/Logos/Logo Osh Kosh.gif"	
+							 title = "Link a Osh Kosh"	
+							 alt = "Logo  Osh Kosh"
+							 >	
+					</a>
+				</div>
 
-				<a class="pull-left" href = "http://www.golfus-76.com.ar/"	target = '_blank' > <img class= "img-responsive" class="pull-left" id = "links_proveedores" src ="imagenes/Logos/Logo Golfus.png"		width = "20%"	height = "230"		border = "5"	title = "Link a Golfus 76" 	alt = "Logo  Golfus 76"		>	</a>
+				<div id="icono">
+					<a href = "http://www.gulmez.com.ar/"
+					   target = '_blank' 
+					   >
+
+						<img class= "img-thumbnail" 
+							 src ="imagenes/Logos/Logo Gulmez.png"	
+							 border = "5"	
+							 title = "Link a Gulmez"		
+							 alt = "Logo  Gulmez"		
+							 >
+					</a>
+				</div>
+
+				<div id="icono">
+					<a href = "http://www.route66.com.py/"
+					   target = '_blank' 
+					   > 
+
+					   <img class= "img-thumbnail" 
+					   		src ="imagenes/Logos/Logo Route 66.png" 
+					   		border = "5"	
+					   		title = "Link a Route 66"	
+					   		alt = "Logo  Route 66"		
+					   		>
+					</a>
+				</div>
+
+				<div id="icono">
+					<a  href = "http://www.golfus-76.com.ar/"	
+						target = '_blank' 
+						>
+
+						<img class= "img-thumbnail" 
+							 src ="imagenes/Logos/Logo Golfus.png"	
+							 border = "5"	
+							 title = "Link a Golfus 76" 	
+							 alt = "Logo  Golfus 76"		
+							 >	
+					</a>
+				</div>
 			</div>
-			
 		</section>
 	{include file="footer.tpl"}

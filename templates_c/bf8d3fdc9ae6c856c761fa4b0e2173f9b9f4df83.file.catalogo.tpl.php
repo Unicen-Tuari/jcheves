@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-10-21 04:08:48
+<?php /* Smarty version Smarty-3.1.19, created on 2014-10-21 16:57:46
          compiled from ".\templates\catalogo.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:25727543479907de293-21111735%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf8d3fdc9ae6c856c761fa4b0e2173f9b9f4df83' => 
     array (
       0 => '.\\templates\\catalogo.tpl',
-      1 => 1413857321,
+      1 => 1413903462,
       2 => 'file',
     ),
   ),
@@ -34,11 +34,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 		<section> 
 			<h1 class = "text-center">	Catalogo		</h1>
+			
+			<br>
+			<br>
+
 		<div id= "cuerpo">
 			<form id ="form_buscar" action="index.php" >
 			<input type="hidden" name="action" value="catalogo"> 
 			<!--	SOLUCION CASERA COMO DULCE DE LECHE	 -->		
 				<label for="tipo"><span class="textform">Tipo </span> </label>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 					<select form="form_buscar" name="tipo" onchange ="cambiotipo();" >
 						<option value="-1" > Todos  </option>
 						<!--	Le llegan los datos asignados desde la view	-->
@@ -55,8 +60,10 @@ $_smarty_tpl->tpl_vars['datostipo']->_loop = true;
 					</select>
 			
 				<br>
+				<br>
 
 				<label for="marca"><span class="textform">Marca</span> </label>
+				&nbsp&nbsp&nbsp	&nbsp
 					<select form="form_buscar" name="marca">
 						<option value="-1" > Todos  </option>
 						<?php  $_smarty_tpl->tpl_vars['datosmarcas'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['datosmarcas']->_loop = false;
@@ -70,14 +77,18 @@ $_smarty_tpl->tpl_vars['datosmarcas']->_loop = true;
  </option>
 						<?php } ?>
 					</select>
+			<br>
+			<br>
 			<input type = "submit" class="btn btn-default" value="Buscar"/>
 			</form>
 			<script src= "./js/ajax.js">	</script>
 		</div>
 		<br>
 		</section>
+		<br>
+		<br>
 		<div id = "resultado_busqueda">
-		<?php echo $_smarty_tpl->getSubTemplate ("resultado_busqueda.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+			<?php echo $_smarty_tpl->getSubTemplate ("resultado_busqueda.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 	
 		</div>
 

@@ -1,3 +1,5 @@
+/*_*_*_*_*_*_*_*_*_*_*_*	CSS DEL HEADER/ NAV	*_*_*_*_*_*_*_*_*_*_*_*_*/
+
 .collapse, .navbar-collapse, .navbar-ex1-collapse,.nav, .navbar-nav, ul ,li{
 	background-color: #1E90FF;
 	
@@ -34,6 +36,20 @@ background-color: #7B68EE transparent;
  background-color:#7B68EE;
 }
 
+.jumbotron{
+	margin-top: 0px;
+	padding-top: 0px;
+	width : 80%;
+	margin-left: 10%;
+  	margin-right: 10%;
+}
+
+.jumbotron h1 {
+	color: #7B68EE;
+}
+
+/*_*_*_*_*_*_*_*_*_*_*_*	CSS DEL CUERPO	*_*_*_*_*_*_*_*_*_*_*_*_*/
+
 .form{
 	margin-left: auto;
   	margin-right: auto;
@@ -42,6 +58,7 @@ background-color: #7B68EE transparent;
 .textform{
 	margin-left: auto;
   	margin-right: auto;
+  	font-size: 20px;
 }
 
 .form-group{
@@ -79,13 +96,44 @@ button{
 	background-color:#7B68EE;
 	color : white;	
 }
-
-footer{
-	margin-top : 10%;
+#contenedor_iconos{
+	width : 100%;
 }
+
+#icono {
+	width : 20%;
+	float :left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/*_*_*_*_*_*_*_*_*_*_*_*	CSS DE LA BUSQUEDA	*_*_*_*_*_*_*_*_*_*_*_*_*/
 
 .media-object{
 	width :	100px;
 	height: 100px;
 	overflow : visible;
 }
+.descripcion_producto{
+	margin-left : 40px;
+	margin-right : 40px;
+	color: #1E90FF;
+	font-size: 20px;
+}
+
+.media-heading{
+	color : white;
+	margin-left: 20px;
+}
+
+ .panel-success {
+	background-color: #1E90FF;
+}
+
+#boton_compra{
+	margin-left: 0px;
+  	margin-right: 20px;
+	float: right;
+}
+
+/*_*_*_*_*_*_*_*_*_*_*_*	CSS DEL FOOTER	*_*_*_*_*_*_*_*_*_*_*_*_*/

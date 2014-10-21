@@ -31,7 +31,7 @@
 					$arr_busqueda = $busqueda->load_busqueda($tipo_busq,$marca_busq);
 					$view->render_busqueda($arr_busqueda);
 					$view->render();
-					//var_dump($arr_busqueda);
+					
 			}
 			else{
 				$view->render();
