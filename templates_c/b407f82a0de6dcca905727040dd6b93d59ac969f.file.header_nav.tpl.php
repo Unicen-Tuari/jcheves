@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-09-30 23:17:57
+<?php /* Smarty version Smarty-3.1.19, created on 2014-10-21 05:39:10
          compiled from ".\templates\header_nav.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18636542b1e0544aa28-90860963%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b407f82a0de6dcca905727040dd6b93d59ac969f' => 
     array (
       0 => '.\\templates\\header_nav.tpl',
-      1 => 1411602249,
+      1 => 1413862749,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.19',
   'unifunc' => 'content_542b1e0544aa23_72491187',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_542b1e0544aa23_72491187')) {function content_542b1e0544aa23_72491187($_smarty_tpl) {?><!DOCTYPE html>
 <html lang= "es">
@@ -54,11 +54,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		      
 		      <li>	<a href="index.php"><span class="txtnav" >Home &nbsp </span><span class="glyphicon glyphicon-home"></span> 	</a></li>
 		      
-		      <li>	<a href="catalogo.php"> <span class="txtnav">Catalogo &nbsp </span> <span class="glyphicon glyphicon-search"></span>	</a></li>
+		      <li>	<a href="index.php?action=catalogo"> <span class="txtnav">Catalogo &nbsp </span> <span class="glyphicon glyphicon-search"></span>	</a></li>
 		      
-		      <li>	<a href="proveedores.php"><span class="txtnav">Proveedores &nbsp </span><span class="glyphicon glyphicon-briefcase"></span>	</a></li>
+		      <li>	<a href="index.php?action=proveedores"><span class="txtnav">Proveedores &nbsp </span><span class="glyphicon glyphicon-briefcase"></span>	</a></li>
 		      
-		      <li>	<a href="contacto.php"><span class="txtnav">Contacto &nbsp</span> <span class="glyphicon glyphicon-envelope"></span> 	</a></li>
+		      <li>	<a href="index.php?action=contacto"><span class="txtnav">Contacto &nbsp</span> <span class="glyphicon glyphicon-envelope"></span> 	</a></li>
 		    </ul>
 			<ul class="nav navbar-nav navbar-right">
 
@@ -69,12 +69,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<span class="txtnav">Log in/Registrarse </span> <b class="caret"></b> </a>
 					<ul class="dropdown-menu">
 						
-						<li><a href="login.php"><span class="txtnav" >Log In &nbsp </span><span class="glyphicon glyphicon-user"></span>  </a></li>
+						<li><a href="index.php?action=login"><span class="txtnav" >Log In &nbsp </span><span class="glyphicon glyphicon-user"></span>  </a></li>
 						
-						<li><a href="registrarse.php"><span class="txtnav" >Registrarse &nbsp </span><span class="glyphicon glyphicon-share-alt"></span> </a></li>
+						<li><a href="index.php?action=registrarse"><span class="txtnav" >Registrarse &nbsp </span><span class="glyphicon glyphicon-share-alt"></span> </a></li>
 
 					</ul>
 				</li>
 			</ul>
 			</div>
-		</nav><?php }} ?>
+		</nav>
+	<div class="jumbotron">
+  		<div class="container"><?php }} ?>

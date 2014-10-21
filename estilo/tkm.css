@@ -50,7 +50,7 @@ background-color: #7B68EE transparent;
   	margin-right: auto;
 }
 
-h1,p,.textform {
+h1,h4,p,.textform {
 	margin-left : 5%;
 	margin-right : 5%;
 	margin-bottom :10px;
@@ -84,3 +84,8 @@ footer{
 	margin-top : 10%;
 }
 
+.media-object{
+	width :	100px;
+	height: 100px;
+	overflow : visible;
+}

@@ -1,4 +1,6 @@
-		<div class="clearfix">...</div>
+		</div>
+	</div>
+		<div class="clearfix"></div>
 		
 		<footer class = "text-center" class="clearfix" class="center-block"> 	
 			<p class = "texto_footer" >

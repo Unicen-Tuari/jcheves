@@ -34,7 +34,6 @@
 		return $this->conexion;	
 		}
 	
-	
 		public function query($sql){
 			$conn = $this->connection();
 		

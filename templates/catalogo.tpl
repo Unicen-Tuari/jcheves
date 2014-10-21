@@ -6,7 +6,9 @@
 		<section> 
 			<h1 class = "text-center">	Catalogo		</h1>
 		<div id= "cuerpo">
-			<form action = "./index.php?action=catalogo" id ="form_buscar" >		
+			<form id ="form_buscar" action="index.php" >
+			<input type="hidden" name="action" value="catalogo"> 
+			<!--	SOLUCION CASERA COMO DULCE DE LECHE	 -->		
 				<label for="tipo"><span class="textform">Tipo </span> </label>
 					<select form="form_buscar" name="tipo" onchange ="cambiotipo();" >
 						<option value="-1" > Todos  </option>
@@ -27,12 +29,14 @@
 								{$datosmarcas.nombre} </option>
 						{/foreach}
 					</select>
-
-					<input type = "submit" class="btn btn-default" value="Buscar"/>
-
+			<input type = "submit" class="btn btn-default" value="Buscar"/>
 			</form>
+			<script src= "./js/ajax.js">	</script>
 		</div>
 		<br>
 		</section>
-	
+		<div id = "resultado_busqueda">
+		{include file="resultado_busqueda.tpl"}	
+		</div>
+
 {include file="footer.tpl"}

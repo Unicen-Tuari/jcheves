@@ -1,8 +1,7 @@
 
 
 <?php
-	$controller;	
-
+	$controller;
 	if (!array_key_exists(	'action', $_REQUEST)	
 		||	$_REQUEST['action'] == 'index'	) {
 
@@ -12,9 +11,7 @@
 	}
 
 	else {
-		
 
-		
 		if ($_REQUEST['action'] == 'catalogo'){
 			include_once "./controllers/CatalogoController.php";
 			$controller = new CatalogoController();
@@ -46,5 +43,4 @@
 			$controller->actionRegistrarse();
 		}
 	}
-
 ?>
