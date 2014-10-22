@@ -18,6 +18,9 @@
 				</div>
 
 	    		<span class="descripcion_producto" >{$datosbusqueda.descripcion}	</span>
+	    		<span class = "precio">$ {$datosbusqueda.precio} </span>
+	    		<br>
+	    		<br>
 	    		<button id="boton_compra" class="btn btn-default" value="Comprar"> Comprar
 	    		</button>
 	    	</div> 

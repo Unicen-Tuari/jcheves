@@ -1,4 +1,5 @@
-{include file="header_nav.tpl" title=foo }		
+{include file="header_nav.tpl" title=foo }
+
 <section> 
     <h1 class = "text-center">  Contacto    </h1>
     <form role="form">

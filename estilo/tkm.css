@@ -125,6 +125,16 @@ button{
 	margin-right: 10px;
 }
 
+#GoogleMaps{
+	width: 800px; 
+    height:600px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: solid 3px;
+    border-spacing: 2px;
+    border-color: black;    
+}
+
 /*_*_*_*_*_*_*_*_*_*_*_*	CSS DE LA BUSQUEDA	*_*_*_*_*_*_*_*_*_*_*_*_*/
 
 .media-object{
@@ -133,8 +143,8 @@ button{
 	overflow : visible;
 }
 .descripcion_producto{
-	margin-left : 40px;
-	margin-right : 40px;
+	margin-left : 10px;
+	margin-right : 10px;
 	color: #1E90FF;
 	font-size: 20px;
 }
@@ -147,8 +157,16 @@ button{
  .panel-success {
 	background-color: #1E90FF;
 }
-
+.precio{
+	color:#7B68EE;
+	font-size: 30px;
+	margin-left: 0px;
+  	margin-right: 20px;
+	float: right;
+}
 #boton_compra{
+	color: white;
+	font-size: 20px;
 	margin-left: 0px;
   	margin-right: 20px;
 	float: right;
