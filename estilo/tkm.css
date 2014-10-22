@@ -44,8 +44,24 @@ background-color: #7B68EE transparent;
   	margin-right: 10%;
 }
 
+body{
+	background-image: url("../imagenes/b1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.jumbotron{
+
+	margin-top: 0px;
+	padding-top: 0px;
+	width : 80%;
+	margin-left: 10%;
+  	margin-right: 10%;
+  	background-color: rgba(238,238,238, 0.1);
+}
+
 .jumbotron h1 {
-	color: #7B68EE;
+	color:white;
 }
 
 /*_*_*_*_*_*_*_*_*_*_*_*	CSS DEL CUERPO	*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -71,13 +87,13 @@ h1,h4,p,.textform {
 	margin-left : 5%;
 	margin-right : 5%;
 	margin-bottom :10px;
-	color:#7B68EE;
+	color:#E5ECFE;
 }
 
 p{
 	margin-top : 5%;
 	margin-bottom : 5%;
-	color: #1E90FF;
+	color:#E5ECFE;
 }
 
 #cuerpo{
@@ -94,6 +110,8 @@ button{
 	margin-left: 45%;
   	margin-right: 45%;
 	background-color:#7B68EE;
+	border-width: 3px;
+	border-color: white;
 	color : white;	
 }
 #contenedor_iconos{
@@ -122,7 +140,7 @@ button{
 }
 
 .media-heading{
-	color : white;
+	color:#E5ECFE;
 	margin-left: 20px;
 }
 
