@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-10-21 16:39:09
+<?php /* Smarty version Smarty-3.1.19, created on 2014-11-21 22:20:16
          compiled from ".\templates\header_nav.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18636542b1e0544aa28-90860963%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b407f82a0de6dcca905727040dd6b93d59ac969f' => 
     array (
       0 => '.\\templates\\header_nav.tpl',
-      1 => 1413902322,
+      1 => 1416604475,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.19',
   'unifunc' => 'content_542b1e0544aa23_72491187',
+  'variables' => 
+  array (
+    'nombreUsuario' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_542b1e0544aa23_72491187')) {function content_542b1e0544aa23_72491187($_smarty_tpl) {?><!DOCTYPE html>
@@ -66,15 +70,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 				<li class="dropdown">
 				<a  class="dropdown-toggle" data-toggle="dropdown">
-				<span class="txtnav">Log in/Registrarse </span> <b class="caret"></b> </a>
-					<ul class="dropdown-menu">
-						
-						<li><a href="index.php?action=login"><span class="txtnav" >Log In &nbsp </span><span class="glyphicon glyphicon-user"></span>  </a></li>
-						
-						<li><a href="index.php?action=registrarse"><span class="txtnav" >Registrarse &nbsp </span><span class="glyphicon glyphicon-share-alt"></span> </a></li>
+				<span class="txtnav"><?php echo $_smarty_tpl->tpl_vars['nombreUsuario']->value;?>
+ </span> <b class="caret"></b> </a>
 
-					</ul>
+				<?php if ($_smarty_tpl->tpl_vars['nombreUsuario']->value=="Log In / Registrarse") {?>
+						<?php echo $_smarty_tpl->getSubTemplate ("menu_no_logueado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>'foo'), 0);?>
+
+					<?php } else { ?>
+						<?php echo $_smarty_tpl->getSubTemplate ("menu_logueado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>'foo'), 0);?>
+
+				<?php }?>
 				</li>
+
 			</ul>
 			</div>
 		</nav>

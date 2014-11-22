@@ -168,7 +168,7 @@ button{
   	margin-right: 20px;
 	float: right;
 }
-#boton_compra{
+.boton_compra{
 	color: white;
 	font-size: 20px;
 	margin-left: 0px;

@@ -10,7 +10,6 @@
 			$view = new CatalogoView;
 			$arr_tipos=[];
 			$arr_marcas=[];
-			$arr_busqueda=[];//Despues no va mas por AJAX
 
 			// La clase combo tipo ejecuta el query, y es asignado al arr
 			$arr_tipos  =  $combo_tipo->load();
@@ -18,24 +17,23 @@
 			$view->render_tipos($arr_tipos);
 			$arr_marcas = $combo_marca->load();
 			$view->render_marcas($arr_marcas);
-			
-			
-			if(	(ISSET($_GET['tipo']))	&&	(ISSET($_GET['marca']))	){
+			$view->render();
+		}
 
-					include_once"./models/modelo_busqueda.php";
-					$busqueda = new busqueda;
-					
-					$tipo_busq = $_GET['tipo'];
-					$marca_busq= $_GET['marca'];
-					// Se consultan los datos en la base y se cargan al arreglo
-					$arr_busqueda = $busqueda->load_busqueda($tipo_busq,$marca_busq);
-					$view->render_busqueda($arr_busqueda);
-					$view->render();
-					
-			}
-			else{
-				$view->render();
-			}
+		public function actionBuscar(){
+
+			include "./views/CatalogoView.php";
+			include_once"./models/modelo_busqueda.php";
+
+			$busqueda = new busqueda;
+			$view = new CatalogoView;
+			
+			$tipo_busq = $_REQUEST['tipo'];
+			$marca_busq= $_REQUEST['marca'];
+			// Se consultan los datos en la base y se cargan al arreglo
+			$arr_busqueda = $busqueda->load_busqueda($tipo_busq,$marca_busq);
+			$view->render_busqueda($arr_busqueda);
+			$view->render_resultado();
 		}
 	}
 ?>

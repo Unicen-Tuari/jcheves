@@ -1,4 +1,4 @@
-{include file="header_nav.tpl" title=foo }
+
 
 <section> 
 			

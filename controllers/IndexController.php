@@ -5,8 +5,5 @@
 			$view = new IndexView;
 			$view->render();
 		}
-
 	}
-
-
 ?>

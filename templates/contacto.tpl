@@ -1,4 +1,4 @@
-{include file="header_nav.tpl" title=foo }
+
 
 <section> 
     <h1 class = "text-center">  Contacto    </h1>

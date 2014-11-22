@@ -1,9 +1,4 @@
-<!--	PREGUNTAR DIEGO COMO HACER PARA QUE SEPARE LOS ITEMS POR SECCIONES
-	PANTALONES
-	BUZOS
-	REMERAS
-	ETC	
--->
+
 {foreach $busqueda as $datosbusqueda}
 	<div class="panel panel-primary">
 		<div class="media">
@@ -21,7 +16,9 @@
 	    		<span class = "precio">$ {$datosbusqueda.precio} </span>
 	    		<br>
 	    		<br>
-	    		<button id="boton_compra" class="btn btn-default" value="Comprar"> Comprar
+	    		<button class="btn btn-default boton_compra"  
+	    				value="Comprar"
+	    				onclick="clickComprar({$datosbusqueda.id})"> Comprar
 	    		</button>
 	    	</div> 
 	  	</div>

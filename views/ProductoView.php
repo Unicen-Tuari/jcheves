@@ -1,9 +1,11 @@
 <?php
-	class ProveedoresView{
+
+	class ProductoView{
 
 		public function render() {
 			$smarty = new Smarty;
-			$smarty->display('proveedores.tpl');
+			$smarty->display('agregarProducto.tpl');
 		}
 	}
+
 ?>

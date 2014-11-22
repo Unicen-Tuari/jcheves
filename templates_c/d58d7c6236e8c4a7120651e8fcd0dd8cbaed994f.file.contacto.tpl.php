@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.19, created on 2014-10-16 00:36:39
+<?php /* Smarty version Smarty-3.1.19, created on 2014-11-20 22:00:27
          compiled from ".\templates\contacto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:14296542b1e24895441-53496456%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd58d7c6236e8c4a7120651e8fcd0dd8cbaed994f' => 
     array (
       0 => '.\\templates\\contacto.tpl',
-      1 => 1413412598,
+      1 => 1416517000,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_542b1e248d24d6_91758195',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_542b1e248d24d6_91758195')) {function content_542b1e248d24d6_91758195($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header_nav.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('title'=>'foo'), 0);?>
-		
+<?php if ($_valid && !is_callable('content_542b1e248d24d6_91758195')) {function content_542b1e248d24d6_91758195($_smarty_tpl) {?>
+
 <section> 
     <h1 class = "text-center">  Contacto    </h1>
     <form role="form">

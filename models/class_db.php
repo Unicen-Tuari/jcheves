@@ -34,11 +34,17 @@
 		return $this->conexion;	
 		}
 	
-		public function query($sql){
+		public function query($sql,	$arreglo = false){
+			
 			$conn = $this->connection();
-		
 			$resultado = $conn->prepare($sql);
-			$resultado->execute();
+			
+			if ($arreglo==false) {
+				$resultado->execute();
+			}
+			else{
+				$resultado->execute($arreglo);	
+			}
 			
 			if(!$resultado){
 				die(print($conn->errorInfo()));
