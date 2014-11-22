@@ -45,15 +45,15 @@
 
 				<li class="dropdown">
 				<a  class="dropdown-toggle" data-toggle="dropdown">
-				<span class="txtnav">Log in/Registrarse </span> <b class="caret"></b> </a>
-					<ul class="dropdown-menu">
-						
-						<li><a href="index.php?action=login"><span class="txtnav" >Log In &nbsp </span><span class="glyphicon glyphicon-user"></span>  </a></li>
-						
-						<li><a href="index.php?action=registrarse"><span class="txtnav" >Registrarse &nbsp </span><span class="glyphicon glyphicon-share-alt"></span> </a></li>
+				<span class="txtnav">{$nombreUsuario} </span> <b class="caret"></b> </a>
 
-					</ul>
+				{if $nombreUsuario == "Log In / Registrarse"}
+						{include file="menu_no_logueado.tpl" title=foo }
+					{else}
+						{include file="menu_logueado.tpl" title=foo }
+				{/if}
 				</li>
+
 			</ul>
 			</div>
 		</nav>
