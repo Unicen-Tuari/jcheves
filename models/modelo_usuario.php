@@ -4,25 +4,23 @@ include_once "class_db.php";
 
 	class usuario extends database {
 
-		public function load () {
+		public function load () { //implementada por herencia
 		}
 
-		public function buscar_usuario($username){
+		public function buscar_usuario($username){ //Dado un username lo busca
 		return $this->query("SELECT u.idusuario
 								FROM usuarios u
 								WHERE u.nombre = '$username';");
 		}
 
-		public function buscar_usuario_clave($username, $password){
+		public function buscar_usuario_clave($username, $password){ //corrobora para el login
 		return $this->query("SELECT u.idusuario, u.admin
 								FROM usuarios u
 								WHERE u.nombre = '$username'
 									AND u.password = '$password';");
 		}
 
-		//Funcionan las verificaciones previas pero no inserta. Estara mal el insert (?)
-
-		public function insertar_usuario($username, $password, $email){
+		public function insertar_usuario($username, $password, $email){ // Agrega usuario
 
 			$arr = array(':username' => $username, 
 						':password' => $password,
