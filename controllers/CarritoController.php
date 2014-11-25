@@ -13,17 +13,18 @@
 					foreach ($_SESSION['carrito'] as $idProducto=> $cantidad){ //cantidad contiene true
 
 						$auxProducto=$carritoQuery->buscarProductoId($idProducto);
+						$auxProducto[0]['cantidad']= $cantidad;
 						$carritoMostrar[]=$auxProducto[0];
 					}
 					$view = new CarritoView;
 					$view->render($carritoMostrar);
 				}	
 				else{
-					//Alert usted no tiene carrito
+					// carrito vacio por ahora
 				}
 			}
 			else{
-				// Que hacer si no esta logueado  y llega a mostrar carrito
+				
 			}
 			
 		}
@@ -37,7 +38,19 @@
 						if (!isset($_SESSION['carrito']) ){
 							$_SESSION['carrito'] = array();
 						}
-						$_SESSION['carrito'][$_REQUEST['idProducto']] = true; // creamos una posicion en el carrito con el ID de producto
+							if (!isset($_SESSION['carrito'][$_REQUEST['idProducto']]) ){
+								$_SESSION['carrito'][$_REQUEST['idProducto']] = 1; // creamos una posicion en el carrito con el ID de producto
+							}
+							else{
+								$_SESSION['carrito'][$_REQUEST['idProducto']] = $_SESSION['carrito'][$_REQUEST['idProducto']]+1;
+							}
+						
+						include_once "./views/AlertView.php";
+						$alerta= new AlertView;
+						$mensaje="Item comprado exitosamente";
+						$clase ="alert-success";
+
+						$alerta->render($mensaje, $clase);
 					}
 			}
 		}

@@ -100,6 +100,17 @@
 		}
 
 		else
+		if ($_REQUEST['action'] == 'mostraragregarProducto'){
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/ProductoController.php";
+			$controller = new ProductoController();
+			$controller->mostrarAgregarProducto();
+		}
+		
+		else
 		if ($_REQUEST['action'] == 'agregarProducto'){
 			include_once "./controllers/Headernavcontroller.php";
 			$headernavcontroller = new HeaderNavController;
@@ -107,9 +118,10 @@
 
 			include_once "./controllers/ProductoController.php";
 			$controller = new ProductoController();
-			$controller->actionAgregarProducto();
+			$controller->AgregarProducto();
 		}
-		
+
+
 		else
 		if ($_REQUEST['action'] == 'mostrarRegistrarse'){
 			include_once "./controllers/Headernavcontroller.php";

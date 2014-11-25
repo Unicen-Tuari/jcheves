@@ -135,8 +135,9 @@ button{
     border-color: black;    
 }
 
-#Mensaje{
-	
+.alert{
+	font-size: 14px;
+	font-weight: bold;
 }
 
 /*_*_*_*_*_*_*_*_*_*_*_*	CSS DE LA BUSQUEDA	*_*_*_*_*_*_*_*_*_*_*_*_*/
@@ -168,12 +169,36 @@ button{
   	margin-right: 20px;
 	float: right;
 }
+
+.precio_tabla{
+	color:#7B68EE;
+	font-size: 30px;
+
+}
+
 .boton_compra{
 	color: white;
 	font-size: 20px;
 	margin-left: 0px;
   	margin-right: 20px;
 	float: right;
+}
+
+table{
+	float:left;
+	background-color: white;
+	color:black;
+	opacity: 0.90;
+}
+
+th{
+	color:#1E90FF;
+	font-size: 25px;
+}
+
+td{
+	color:#7B68EE;
+	font-size: 18px;
 }
 
 /*_*_*_*_*_*_*_*_*_*_*_*	CSS DEL FOOTER	*_*_*_*_*_*_*_*_*_*_*_*_*/

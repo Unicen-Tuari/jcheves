@@ -1,7 +1,7 @@
 <?php
 	class RegistrarseController {
 		public function actionMostrarRegistrarse(){
-			include "./views/RegistrarseView.php";
+			include_once "./views/RegistrarseView.php";
 			$view = new RegistrarseView;
 			$view->render();
 		}
@@ -19,29 +19,64 @@
 				if ($password == $verifpassword){
 					//Se dan todas las condiciones, insertamos el user en la base
 					$agregar->insertar_usuario($usuario,$email,$password);
-					echo "<script type=\"text/javascript\">alert(\"Registrado exitosamente\");</script>";
-					
+
 					include_once "./controllers/Headernavcontroller.php";
-					$headernavcontroller = new HeaderNavController;
-					$headernavcontroller->actionmostrarheadernav();
+						$headernavcontroller = new HeaderNavController;
+						$headernavcontroller->actionmostrarheadernav();
+					
+				//muestra el alert de exito
+
+					include_once "./views/AlertView.php";
+						$alerta= new AlertView;
+						$mensaje="Registrado exitosamente";
+						$clase ="alert-success";
+
+						$alerta->render($mensaje, $clase);
+
 					include_once "./controllers/LoginController.php";
-					$controller = new LoginController();
-					$controller->actionmostrarLogin();
+						$controller = new LoginController();
+						$controller->actionmostrarLogin();
 				}
 				else{
-					//mensaje de error 
-					echo "<script type=\"text/javascript\">alert(\"las contraseñas no coinciden\");</script>";
+					
+					//actualiza la barra de navegacion
+					include_once "./controllers/Headernavcontroller.php";
+						$headernavcontroller = new HeaderNavController;
+						$headernavcontroller->actionmostrarheadernav();
+
+					//muestra el alert
+
+					include_once "./views/AlertView.php";
+						$alerta= new AlertView;
+						$mensaje="La contraseña y la verificacion no coinciden";
+						$clase ="alert-warning";
+
+						$alerta->render($mensaje, $clase);
+
 					//Redireccion a registrarse
-					include "./controllers/RegistrarseController.php";
-					$controller = new RegistrarseController();
-					$controller->actionMostrarRegistrarse();
+					include_once "./controllers/RegistrarseController.php";
+						$controller = new RegistrarseController();
+						$controller->actionMostrarRegistrarse();
 				}
 			}
 			else{
-				//mensaje de error
-				echo "<script type=\"text/javascript\">alert(\"El nombre de usuario ya existe\");</script>";	
+
+				//actualiza la barra de navegacion
+				include_once "./controllers/Headernavcontroller.php";
+					$headernavcontroller = new HeaderNavController;
+					$headernavcontroller->actionmostrarheadernav();
+
+				//muestra el alert
+
+				include_once "./views/AlertView.php";
+					$alerta= new AlertView;
+					$mensaje="El nombre de usuario que usted eligio ya existe";
+					$clase ="alert-danger";
+				
+					$alerta->render($mensaje, $clase);
+
 				//redireccion a registrarse
-				include "./controllers/RegistrarseController.php";
+				include_once "./controllers/RegistrarseController.php";
 					$controller = new RegistrarseController();
 					$controller->actionMostrarRegistrarse();
 			}

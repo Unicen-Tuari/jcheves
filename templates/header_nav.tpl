@@ -50,7 +50,12 @@
 				{if $nombreUsuario == "Log In / Registrarse"}
 						{include file="menu_no_logueado.tpl" title=foo }
 					{else}
-						{include file="menu_logueado.tpl" title=foo }
+						{if {$admin} == 0}
+							{include file="menu_logueado.tpl" title=foo }
+							
+						{else}
+								{include file="menu_admin.tpl" title=foo }
+						{/if}
 				{/if}
 				</li>
 

@@ -2,8 +2,28 @@
   
   <h1 class = "text-center">   Agregar Productos  </h1>
 
-  <form class = "text-center" role="form" 
-        action="index.php?action=dataLogin" method="POST">
+  <form class = "text-center" 
+        role="form" 
+        action="index.php?action=agregarProducto" 
+        method="POST">
+
+       <div class="form-group">
+      <label for="tipo"> <span class="textform"> Tipo</span></label>
+        <input name ="tipo" 
+               type="text" 
+               class="form-control"
+               id="tipo"
+               placeholder="Introduce el Tipo del producto capitalizada">
+      </div>
+
+     <div class="form-group">
+      <label for="marca"> <span class="textform"> Marca</span></label>
+        <input name ="marca" 
+               type="text" 
+               class="form-control"
+               id="marca"
+               placeholder="Introduce la Marca del producto capitalizada">
+    </div>
 
     <div class="form-group">
       <label for="descripcion"> <span class="textform"> Descripcion del Producto</span></label>
@@ -15,18 +35,9 @@
     </div>
 
     <div class="form-group">
-      <label for="talle"> <span class="textform"> Talle</span></label>
-      <input name ="talle" 
-             type="text"
-             class="form-control"
-             id="talle"
-             placeholder="Introduce el talle del producto">
-    </div>
-
-    <div class="form-group">
       <label for="precio"> <span class="textform"> Precio</span></label>
       <input name ="precio" 
-             type="text"
+             type="number"
              class="form-control"
              id="precio"
              placeholder="Introduce el precio del producto">

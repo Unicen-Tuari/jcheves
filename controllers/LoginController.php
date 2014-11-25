@@ -18,17 +18,43 @@
 				$_SESSION['idusuario'] = $resultado[0]['idusuario'];
 				$_SESSION['nombre'] = $usuario;
 				$_SESSION['admin'] = $resultado[0]['admin'];
+
+				//actualiza la barra de navegacion
 				include_once "./controllers/Headernavcontroller.php";
 				$headernavcontroller = new HeaderNavController;
 				$headernavcontroller->actionmostrarheadernav();
+
+				//muestra el alert de exito de login
+
+				include_once "./views/AlertView.php";
+				$alerta= new AlertView;
+				$mensaje="Logueado exitosamente";
+				$clase ="alert-success";
+
+				$alerta->render($mensaje, $clase);
+
+				//redirige a home
 				include_once "./controllers/IndexController.php";
 				$controller = new IndexController();
 				$controller->actionIndex();
 			}
 
 			else{
-				echo "<script type=\"text/javascript\">alert(\"Usuario o clave erroneos\");</script>";
-				include_once "./controllers/LoginController.php";
+
+				//actualiza la barra de navegacion
+				include_once "./controllers/Headernavcontroller.php";
+				$headernavcontroller = new HeaderNavController;
+				$headernavcontroller->actionmostrarheadernav();
+
+				//muestra el alert de error al login
+				include_once "./views/AlertView.php";
+				$alerta= new AlertView;
+				$mensaje="Usuario o password erroneos";
+				$clase ="alert-warning";
+
+				$alerta->render($mensaje, $clase);
+
+				//redirige a login otra vez
 				$controller = new LoginController();
 				$controller->actionmostrarLogin();
 			}

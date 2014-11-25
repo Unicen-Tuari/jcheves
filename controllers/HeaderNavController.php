@@ -5,7 +5,12 @@
 			$view = new HeaderNavView ;
 			
 			if (array_key_exists("nombre", $_SESSION ) ){
-				$view->render($_SESSION['nombre']);
+				if($_SESSION['admin'] == "1"){
+					$view->render($_SESSION['nombre'],$_SESSION['admin']);
+				}
+				else{
+					$view->render($_SESSION['nombre']);
+				}
 			}
 
 			else{
