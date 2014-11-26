@@ -40,9 +40,19 @@ class AdministrarUsuarios {
 
 			if	(isset($_SESSION['nombre']) ){
 				if	(($_SESSION['admin'])==1 ){
-					//updatear un 1 en status
+
+					$modeloUsuario = new usuario;
+					$modeloUsuario->desbloquear_usuario($id);
 				}	
 			}
+			include_once "./views/AlertView.php";
+			$alerta= new AlertView;
+			$mensaje="Usuario desbloqueado exitosamente";
+			$clase ="alert-success";
+
+			$alerta->render($mensaje, $clase);
+
+			$this->actionMostrarAdministrarUsuarios();
 		}
 
 		public function PromoverUsuario($id){
@@ -50,9 +60,18 @@ class AdministrarUsuarios {
 
 			if	(isset($_SESSION['nombre']) ){
 				if	(($_SESSION['admin'])==1 ){
-					//Insertar un 1 en admin
+					$modeloUsuario = new usuario;
+					$modeloUsuario->promover_usuario($id);
 				}	
 			}
+			include_once "./views/AlertView.php";
+			$alerta= new AlertView;
+			$mensaje="Usuario promovido a admin exitosamente";
+			$clase ="alert-success";
+
+			$alerta->render($mensaje, $clase);
+
+			$this->actionMostrarAdministrarUsuarios();
 		}
 
 		public function VerComprasUsuario($id){
@@ -61,8 +80,14 @@ class AdministrarUsuarios {
 			
 			if	(isset($_SESSION['nombre']) ){
 				if	(($_SESSION['admin'])==1 ){
-					//Insertar un 1 en admin
-				}	
+					$modeloUsuario = new usuario;
+					$arrTodasCompras=$modeloUsuario->todas_compras_cliente($id);
+					
+					include_once"./views/VerComprasUsuarioView.php";
+					$vistacompras = new VerComprasUsuario;
+					$vistacompras->render($arrTodasCompras);
+				}
+
 			}
 		}
 	}		

@@ -28,10 +28,7 @@
 
 		public function agregarProductoCarrito(){
 
-			if	(!isset($_SESSION['nombre']) ){
-					// No logueado, mandar a login
-			}
-			else{
+			if	(isset($_SESSION['nombre']) ){
 					if (isset($_REQUEST['idProducto'])){
 						if (!isset($_SESSION['carrito']) ){
 							$_SESSION['carrito'] = array();
@@ -95,31 +92,51 @@
 
 			include './views/ContactoView.php';
 			$msg = null;
-			echo"estamos afuera";
-			//if (isset($_POST["phpmailer"])){
-				echo"Entramos a php mailer";
 				$dest = $to;
 				$email = $to;
+				$asunto = 'Notificacion de compra de '.$_SESSION['nombre'];
+				$mensaje = "<table>".	
+								"<thead>" .
+									"<tr>".
+										"<th>".
+											"Producto".
+										"</th>".
+										"<th>".
+											"Marca".
+										"</th>".
+										"<th>".
+											"Cantidad".
+										"</th>".
+										"<th>".
+											"Precio Unitario".
+										"</th>".
+									"</tr>".
+								"</thead>".
+							"<tbody>";		
+				foreach($contenido as 	$datosProducto ){
+						$tipo_preda  =        $datosProducto['nombre_tipo'];
+						$marca_preda =        $datosProducto['nombre_marca'];
+						$cantidad    =        $datosProducto['cantidad'];
+						$precio      =        $datosProducto['precio'];
+					
+					$mensaje = $mensaje."<tr>".
+											"<td>".$tipo_preda."</td>".
+											
+											"<td>".$marca_preda."</td>".
+										
+											"<td>".$cantidad."</td>".	
+					
+											"<td>".$precio."</td>".
+										"<tr>";
+				}
 
-				//meter en foreach para obtener todos
-				$tipo_preda = $contenido[0]['nombre_tipo'];
-				$marca_preda = $contenido[0]['nombre_marca'];
-				$cantidad = $contenido[0]['cantidad'];
-				$precio = $contenido[0]['precio'];
-
-				$mensaje = $tipo_preda." ".$marca_preda." ".$cantidad." ".$precio;
-				$asunto = 'No contestar. Notificacion de la pagina';
-				
+				$mensaje = $mensaje."</tbody>"."</table>";
 				include_once "PHPMailer/PHPMailerAutoload.php";
 			
 				$mail = new PHPMailer;
 				  
 				//indico a la clase que use SMTP
 				$mail->IsSMTP();
-				  
-				//permite modo debug para ver mensajes de las cosas que van ocurriendo
-				//$mail->SMTPDebug = 2;
-
 				//Debo de hacer autenticación SMTP
 				$mail->SMTPAuth = true;
 				$mail->SMTPSecure = "ssl";
@@ -138,7 +155,7 @@
 			   
 				$mail->From = $email;
 				
-				$mail->Subject = $asunto.' por '.$dest;
+				$mail->Subject = $asunto;
 			   
 				$mail->addAddress($email);
 				

@@ -15,7 +15,7 @@
 				$dest = $_POST["email"];
 				$email = 'jesuscheves1991@gmail.com';
 				$mensaje = $_POST["mensaje"];
-				$asunto = 'No contestar. Notificacion de la pagina';
+				$asunto = 'No contestar. Mensaje de contacto desde la pagina';
 				
 				include_once "PHPMailer/PHPMailerAutoload.php";
 			

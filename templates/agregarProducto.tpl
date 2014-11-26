@@ -43,6 +43,15 @@
              placeholder="Introduce el precio del producto">
     </div>
 
-    <button type="submit" class="btn btn-default">Subir Producto &nbsp <span class="glyphicon glyphicon-send"></span></button>
+    <div class="form-group">
+      <label for="Imagen"> <span class="textform"> Imagen</span></label>
+      <input name ="imagen" 
+             type="file"
+             id="imagen">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-default ">Subir Producto &nbsp <span class="glyphicon glyphicon-send"></span></button>
   </form>
 {include file="footer.tpl"}

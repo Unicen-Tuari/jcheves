@@ -35,6 +35,9 @@
 
 	<br>
 	<br>
-	<input type = "submit" class="btn btn-default" value="Finalizar Compra"/>
-
+	<a href="index.php?action=ConfirmarCarrito">
+		<input type = "submit" 
+			   class="btn btn-default"
+			   value="Finalizar Compra"/>
+	</a>
 {include file="footer.tpl"}

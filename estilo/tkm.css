@@ -194,11 +194,18 @@ table{
 th{
 	color:#1E90FF;
 	font-size: 25px;
+	width: 5px;
 }
 
 td{
+
+	margin :15px;
 	color:#7B68EE;
 	font-size: 18px;
+}
+
+input{
+	margin :0px;
 }
 
 /*_*_*_*_*_*_*_*_*_*_*_*	CSS DEL FOOTER	*_*_*_*_*_*_*_*_*_*_*_*_*/

@@ -7,9 +7,7 @@
 
 	<!-- Administrar Usuarios -->
 
-	<li><a href="index.php?action=mostraradministrarUsuarios"><span class="txtnav" >Administrar Usuarios &nbsp </span><span class="glyphicon glyphicon-circle_exclamation_mark"></span> </a></li>
-
-	
+	<li><a href="index.php?action=mostrarAdministrarUsuarios"><span class="txtnav" >Administrar Usuarios &nbsp </span><span class="glyphicon glyphicon-circle_exclamation_mark"></span> </a></li>
 
 	<!-- Cerrar Sesion -->
 	

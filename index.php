@@ -94,7 +94,7 @@
 			$controller = new CarritoController();
 			$controller->agregarProductoCarrito();
 		}
-
+		else
 		if ($_REQUEST['action'] == 'ConfirmarCarrito'){
 			
 			include_once "./controllers/CarritoController.php";
@@ -146,6 +146,46 @@
 			settype($_REQUEST['idusuario'], "integer");
 			$controller->BloquearUsuario($_REQUEST['idusuario']);
 		}
+
+		else
+		if ($_REQUEST['action'] == 'desbloquearUsuario'){
+
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarUsuariosController.php";
+			$controller = new AdministrarUsuarios;
+			settype($_REQUEST['idusuario'], "integer");
+			$controller->DesbloquearUsuario($_REQUEST['idusuario']);
+		}
+
+		else
+		if ($_REQUEST['action'] == 'promoverUsuario'){
+
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarUsuariosController.php";
+			$controller = new AdministrarUsuarios;
+			settype($_REQUEST['idusuario'], "integer");
+			$controller->PromoverUsuario($_REQUEST['idusuario']);
+		}
+
+		else
+		if ($_REQUEST['action'] == 'verComprasUsuario'){
+
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarUsuariosController.php";
+			$controller = new AdministrarUsuarios;
+			settype($_REQUEST['idusuario'], "integer");
+			$controller->VerComprasUsuario($_REQUEST['idusuario']);
+		}
+
 
 //********** ADMINISTRAR PRODUCTOS ******************//
 		else

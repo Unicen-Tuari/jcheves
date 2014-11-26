@@ -12,7 +12,7 @@
 		<div id= "cuerpo">
 			<form id ="form_buscar" >
 			<input type="hidden" name="action" value="buscar"> 
-			<!--	SOLUCION CASERA COMO DULCE DE LECHE	 -->		
+				
 				<label for="tipo"><span class="textform">Tipo </span> </label>
 				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 					<select form="form_buscar" name="tipo"> 
