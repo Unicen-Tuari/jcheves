@@ -6,6 +6,21 @@ include_once "class_db.php";
 		public function load(){
 
 		}
+		public function todos_productos(){
+			return $this->query("SELECT r.id, t.nombre AS tipo,
+				                        m.nombre AS marca
+
+						FROM ropa r
+							JOIN tipo t ON (r.tipo = t.idtipo )
+							JOIN marca m ON (r.marca =m.idmarca )
+								ORDER BY r.id ASC
+							;");
+		}
+
+		public function borrar_producto ($id) {
+		return $this->query("DELETE FROM `ropa`
+					WHERE ((`id` = '$id'));");
+		}
 
 		public function buscar_tipo($nombreTipo){
 		return $this->query("SELECT t.idtipo

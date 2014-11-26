@@ -61,8 +61,12 @@
 
 					$descripcionagregar=	$_REQUEST['descripcion'];
 					$precioagregar=	$_REQUEST['precio'];
-					$imagenagregar="./imagenes/catalogo/nuevas_imagenes/".$_REQUEST['imagen'];
-
+					if(isset($_REQUEST['imagen'])){
+						$imagenagregar="./imagenes/catalogo/nuevas_imagenes/".$_REQUEST['imagen'];
+					}
+					else{
+						$imagenagregar="Path";
+					}
 					//Agregamos el producto
 					$modeloRopa->agregar_ropa($marcaagregar, $tipoagregar, $descripcionagregar, $precioagregar, $imagenagregar);
 

@@ -189,6 +189,29 @@
 
 //********** ADMINISTRAR PRODUCTOS ******************//
 		else
+		if ($_REQUEST['action'] == 'mostrarAdministrarProductos'){
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarProductosController.php";
+			$controller = new AdministrarProductos;
+			$controller->actionMostrarAdministrarProductos();
+		}
+
+		else
+		if ($_REQUEST['action'] == 'borrarProducto'){
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarProductosController.php";
+			$controller = new AdministrarProductos;
+			settype($_REQUEST['idropa'], "integer");
+			$controller->borrarProducto($_REQUEST['idropa']);
+		}
+
+		else
 		if ($_REQUEST['action'] == 'mostraragregarProducto'){
 			include_once "./controllers/Headernavcontroller.php";
 			$headernavcontroller = new HeaderNavController;
@@ -209,6 +232,55 @@
 			$controller = new ProductoController();
 			$controller->AgregarProducto();
 		}
+
+//********** ADMINISTRAR TIPOS ******************//
+		else
+		if ($_REQUEST['action'] == 'mostrarAdministrarTipos'){
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarTiposController.php";
+			$controller = new AdministrarTipos;
+			$controller->actionMostrarAdministrarTipos();
+		}
+
+		else
+		if ($_REQUEST['action'] == 'borrarTipo'){
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarTiposController.php";
+			settype($_REQUEST['idtipo'], "integer");
+			$controller = new AdministrarTipos;
+			$controller->borrarTipo($_REQUEST['idtipo']);
+		}
+
+//********** ADMINISTRAR MARCAS ******************//
+		else
+		if ($_REQUEST['action'] == 'mostrarAdministrarMarcas'){
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarMarcasController.php";
+			$controller = new AdministrarMarcas;
+			$controller->actionMostrarAdministrarMarcas();
+		}
+
+		else
+		if ($_REQUEST['action'] == 'borrarMarca'){
+			include_once "./controllers/Headernavcontroller.php";
+			$headernavcontroller = new HeaderNavController;
+			$headernavcontroller->actionmostrarheadernav();
+
+			include_once "./controllers/AdministrarMarcasController.php";
+			settype($_REQUEST['idmarca'], "integer");
+			$controller = new AdministrarMarcas;
+			$controller->borrarMarca($_REQUEST['idmarca']);
+		}
+
 
 //********** REGISTRARSE ******************//
 		else
