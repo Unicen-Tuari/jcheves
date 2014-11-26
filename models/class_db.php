@@ -54,5 +54,24 @@
 		return $data;
 		}
 
+		public function insert_retornaUltimaId($sql, $param = false){
+			$conn = $this->connect();
+			//Ejecucion
+			if (!$param){
+				$q	 = $conn->query($sql);
+			} else if ($param) {
+				$q = $conn->prepare($sql);
+				$q->execute($param);
+				 
+			}
+			//Si es null, hubo un error
+			if(!$q)
+			{
+			  die("Error al ejecutar una consulta, Mensaje: ". $conn->errorInfo());
+			}
+			/* Si fue exitoso retorna el ID */
+			return $conn->lastInsertId();
+		}
+
 	}
 ?>

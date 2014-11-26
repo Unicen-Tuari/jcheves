@@ -5,14 +5,20 @@
 
 			include_once "./views/AgregarProductoView.php";
 
-			$view = new AgregarProductoView;
-			$view->render();
+			if(isset($_SESSION['nombre'])){
+				if(($_SESSION['admin'])==1){
+
+					$view = new AgregarProductoView;
+					$view->render();
+				}
+			}
+			//redireccion de no sos admin
 		}	
 
 		public function AgregarProducto(){
 
 			if(isset($_SESSION['nombre'])){
-				if(isset($_SESSION['admin'])){
+				if(($_SESSION['admin'])==1){
 	
 					include_once"./models/modelo_ropa.php";
 					$modeloRopa = new ropa;
@@ -55,9 +61,10 @@
 
 					$descripcionagregar=	$_REQUEST['descripcion'];
 					$precioagregar=	$_REQUEST['precio'];
-					
+					$imagenagregar="./imagenes/catalogo/nuevas_imagenes/".$_REQUEST['imagen'];
+
 					//Agregamos el producto
-					$modeloRopa->agregar_ropa($marcaagregar, $tipoagregar, $descripcionagregar, $precioagregar);
+					$modeloRopa->agregar_ropa($marcaagregar, $tipoagregar, $descripcionagregar, $precioagregar, $imagenagregar);
 
 					//muestra el alert de exito
 

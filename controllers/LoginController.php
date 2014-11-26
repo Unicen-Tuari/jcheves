@@ -15,8 +15,26 @@
 			$busquedaUsuario = new usuario;
 			$resultado = $busquedaUsuario -> buscar_usuario_clave($usuario, $password);
 			if ($resultado != null){
+					settype($resultado[0]['status'], "integer");
+				if($resultado[0]['status'] == 1){
+
+					include_once "./controllers/Headernavcontroller.php";
+					$headernavcontroller = new HeaderNavController;
+					$headernavcontroller->actionmostrarheadernav();
+
+					include_once "./views/AlertView.php";
+					$alerta= new AlertView;
+					$mensaje="Su cuenta esta bloqueada";
+					$clase ="alert-danger";
+					$alerta->render($mensaje, $clase);
+
+					$controller = new LoginController();
+					$controller->actionmostrarLogin();
+				}
+
 				$_SESSION['idusuario'] = $resultado[0]['idusuario'];
 				$_SESSION['nombre'] = $usuario;
+				settype($resultado[0]['admin'], "integer");
 				$_SESSION['admin'] = $resultado[0]['admin'];
 
 				//actualiza la barra de navegacion
